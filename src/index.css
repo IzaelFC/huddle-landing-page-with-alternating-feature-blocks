@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+    --pink: hsl(322, 100%, 66%);
+
+    --very-pale-cyan: hsl(193, 100%, 96%);
+    --very-dark-cyan: hsl(192, 100%, 9%);
+    --grayish-blue: hsl(208, 11%, 55%);
+
+    font-family: 'Poppins';
+}
+
+@layer components {
+    button {
+        @apply bg-[--pink] text-white sm:text-base text-xs font-semibold sm:py-3 py-2 sm:px-16 px-10 rounded-full
+    }
+
+    h1 {
+        @apply font-['Poppins'] font-bold sm:text-4xl text-3xl text-[--very-dark-cyan]
+    }
+
+    h2 {
+        @apply font-['Poppins'] font-bold sm:text-2xl text-xl text-[--very-dark-cyan]
+    }
+
+    p {
+        @apply text-[--grayish-blue] sm:text-base text-sm   
+    }
+
+    section {
+        @apply p-10 mx-auto sm:text-left text-center rounded-xl shadow-[0px_0px_4px_4px] shadow-red-300/20
+    }
+
+    section img {
+        @apply sm:w-[40%] sm:mb-0 mb-5 -order-last
+    }
+
+    footer img, footer span {
+        @apply my-auto
+    }
+
+    ion-icon {
+        @apply p-2 border rounded-full
+    }
+}
